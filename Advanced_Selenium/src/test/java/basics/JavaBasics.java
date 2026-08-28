@@ -26,5 +26,7 @@ public class JavaBasics
 		String p = s.substring((s.length()/2)-1,(s.length()/2)+1);
 		
 		System.out.println(p);
+		System.out.println(p);
+		
 	}
 }
