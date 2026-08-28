@@ -21,7 +21,7 @@ public class JavaBasics
 		String endDate = sd.format(cal.getTime());
 		System.out.println(endDate);
 		
-		String s = "Karthik";
+		String s = "Karthihghghk";
 		
 		String p = s.substring((s.length()/2)-1,(s.length()/2)+1);
 		
