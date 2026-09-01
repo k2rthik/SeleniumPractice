@@ -20,8 +20,8 @@ import com.crm.generic.webdriverutility.UtilityClassObject;
 
 public class ListImpClass implements ITestListener, ISuiteListener
 {
-	public static ExtentReports report;
-	public static ExtentTest test;
+	public ExtentReports report;
+	public ExtentTest test;
 
 	@Override
 	public void onStart(ISuite suite)
@@ -38,6 +38,7 @@ public class ListImpClass implements ITestListener, ISuiteListener
 		// add ENV info and create test
 		report = new ExtentReports();
 		report.attachReporter(spark);
+		report.setSystemInfo("Tester", "Karthik Karnati");
 		report.setSystemInfo("OS", "Win 11");
 		report.setSystemInfo("Browser", "Chrome");
 	}
@@ -85,7 +86,7 @@ public class ListImpClass implements ITestListener, ISuiteListener
 //		test.addScreenCaptureFromBase64String(file,report);
 //		test.log(Status.FAIL,result.getMethod().getMethodName()+"===> Failed");
 		test.fail("Test Failed: " + result.getThrowable(),
-	              MediaEntityBuilder.createScreenCaptureFromBase64String(file).build());
+	              MediaEntityBuilder.createScreenCaptureFromBase64String(file,report).build());
 	}
 
 }

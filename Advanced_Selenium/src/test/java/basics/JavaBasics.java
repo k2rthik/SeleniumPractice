@@ -4,8 +4,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import org.junit.internal.matchers.SubstringMatcher;
-
 public class JavaBasics
 {
 	public static void main(String[] args)
@@ -25,7 +23,6 @@ public class JavaBasics
 		
 		String p = s.substring((s.length()/2)-1,(s.length()/2)+1);
 		
-		System.out.println(p);
 		System.out.println(p);
 		
 	}

@@ -4,6 +4,7 @@ import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
 import com.aventstack.extentreports.Status;
+import com.crm.generic.webdriverutility.UtilityClassObject;
 
 public class RetryListener implements IRetryAnalyzer
 {
@@ -14,7 +15,7 @@ public class RetryListener implements IRetryAnalyzer
 	{	
 		if(count<limitCount)
 			{
-				ListImpClass.test.log(Status.WARNING, result.getMethod().getMethodName()+" ===> Retrying");
+				UtilityClassObject.getTest().log(Status.WARNING, result.getMethod().getMethodName()+" ===> Retrying");
 				count++;
 				return true;
 			}

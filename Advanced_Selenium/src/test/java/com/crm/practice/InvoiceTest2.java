@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import com.crm.generic.base.BaseClass;
 import com.crm.generic.webdriverutility.UtilityClassObject;
-import com.crm.listenerutility.ListImpClass;
 
 public class InvoiceTest2 extends BaseClass
 {
@@ -19,7 +18,7 @@ public class InvoiceTest2 extends BaseClass
 		String actual = driver.getTitle();
 		
 		if(actual.contains(expected))
-			ListImpClass.test.log(Status.PASS, expected +" verified ");
+			UtilityClassObject.getTest().log(Status.PASS, expected +" verified ");
 		else
 			Assert.fail(expected+" not verified");
 		UtilityClassObject.getTest().log(Status.INFO,"Step 1");
