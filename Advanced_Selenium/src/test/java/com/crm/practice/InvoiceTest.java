@@ -27,6 +27,8 @@ public class InvoiceTest extends BaseClass
 		System.out.println("Step 2");
 		System.out.println("Step 3");
 		System.out.println("Step 4");
+		String browser = System.getProperty("url","chrome");
+		System.out.println(browser);
 	}
 	
 	@Test
